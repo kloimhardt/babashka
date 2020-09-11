@@ -9,6 +9,7 @@
 
 (def reitit-ring-namespace
   {'ring-handler (copy-var ring/ring-handler tns)
+   'router (copy-var ring/router tns)
    'routes (copy-var ring/routes tns)
    'create-resource-handler (copy-var ring/create-resource-handler tns)})
 
@@ -18,4 +19,5 @@
 
 (def ring-util-response-namespace
   {'response (copy-var response/response tns)
+   'resource-data(copy-var response/resource-data tns)
    'header (copy-var response/header tns)})
