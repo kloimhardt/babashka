@@ -21,7 +21,10 @@
    [babashka.impl.error-handler :refer [error-handler]]
    [babashka.impl.features :as features]
    [babashka.impl.http-kit :refer [http-kit-server-namespace]]
-   [babashka.impl.reitit :refer [reitit-ring-namespace]]
+   [babashka.impl.reitit :refer
+    [reitit-ring-namespace
+     ring-middleware-defaults-namespace
+     ring-util-response-namespace]]
    [babashka.impl.pods :as pods]
    [babashka.impl.protocols :refer [protocols-namespace]]
    [babashka.impl.repl :as repl]
@@ -391,7 +394,9 @@ If neither -e, -f, or --socket-repl are specified, then the first argument that 
        'clojure.datafy datafy-namespace
        'clojure.core.protocols protocols-namespace
        'org.httpkit.server http-kit-server-namespace
-       'reitit.ring reitit-ring-namespace}
+       'reitit.ring reitit-ring-namespace
+       'ring.middleware.defaults ring-middleware-defaults-namespace
+       'ring.util.response ring-util-response-namespace}
     features/xml?  (assoc 'clojure.data.xml @(resolve 'babashka.impl.xml/xml-namespace))
     features/yaml? (assoc 'clj-yaml.core @(resolve 'babashka.impl.yaml/yaml-namespace)
                           'flatland.ordered.map @(resolve 'babashka.impl.ordered/ordered-map-ns))

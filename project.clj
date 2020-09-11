@@ -23,7 +23,9 @@
                  [nrepl/bencode "1.1.0"]
                  [borkdude/sci.impl.reflector "0.0.1-java11"]
                  [http-kit "2.5.0-alpha2"]
-                 [metosin/reitit "0.5.5"]]
+                 [metosin/reitit "0.3.10"]
+                 [ring/ring-defaults "0.3.2"]]
+
   :profiles {:feature/xml  {:source-paths ["feature-xml"]
                             :dependencies [[org.clojure/data.xml "0.2.0-alpha6"]]}
              :feature/yaml {:source-paths ["feature-yaml"]
