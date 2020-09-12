@@ -24,6 +24,7 @@
                  [borkdude/sci.impl.reflector "0.0.1-java11"]
                  [http-kit "2.5.0-alpha2"]
                  [metosin/reitit "0.3.10"]
+                 [ring/ring-core "1.8.1"]
                  [ring/ring-defaults "0.3.2"]]
 
   :profiles {:feature/xml  {:source-paths ["feature-xml"]
