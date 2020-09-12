@@ -71,7 +71,7 @@
   (require '[babashka.impl.yaml]
            '[babashka.impl.ordered]))
 
-(when features/jdbc?
+#_(when features/jdbc?
   (require '[babashka.impl.jdbc]))
 
 (when features/core-async?
@@ -400,8 +400,8 @@ If neither -e, -f, or --socket-repl are specified, then the first argument that 
     features/xml?  (assoc 'clojure.data.xml @(resolve 'babashka.impl.xml/xml-namespace))
     features/yaml? (assoc 'clj-yaml.core @(resolve 'babashka.impl.yaml/yaml-namespace)
                           'flatland.ordered.map @(resolve 'babashka.impl.ordered/ordered-map-ns))
-    features/jdbc? (assoc 'next.jdbc @(resolve 'babashka.impl.jdbc/njdbc-namespace)
-                          'next.jdbc.sql @(resolve 'babashka.impl.jdbc/next-sql-namespace))
+;;    features/jdbc? (assoc 'next.jdbc @(resolve 'babashka.impl.jdbc/njdbc-namespace)
+;;                          'next.jdbc.sql @(resolve 'babashka.impl.jdbc/next-sql-namespace))
     features/core-async? (assoc 'clojure.core.async @(resolve 'babashka.impl.async/async-namespace)
                                 'clojure.core.async.impl.protocols @(resolve 'babashka.impl.async/async-protocols-namespace))
     features/csv?  (assoc 'clojure.data.csv @(resolve 'babashka.impl.csv/csv-namespace))
