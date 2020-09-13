@@ -337,17 +337,18 @@
          params (parameters (->> parts (remove string?) (map :value)))]
      (-insert (or node (-node {})) (split-path path opts) path params data))))
 
-(defn compiler
+(defn compiler [] nil)
+
+;;klm
+#_(defn compiler
   "Returns a default [[TrieCompiler]]."
   []
   #?(:cljs (clojure-trie-compiler)
      :clj  (java-trie-compiler)))
 
-(defn compile
-  ([a] (compile a nil))
-  ([a b] (compile a b nil))
-  ([a b c] nil))
+(defn compile [& _] nil)
 
+;;klm
 #_(defn compile
   "Returns a compiled trie, to be used with [[pretty]] or [[path-matcher]]."
   ([options]

@@ -103,7 +103,7 @@
   (find-var sym))
 
 (def ^:private default-store
-  nil
+  nil ;;klm
   #_(delay
    (let [store 'ring.middleware.multipart-params.temp-file/temp-file-store
          func  (load-var store)]
