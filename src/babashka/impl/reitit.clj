@@ -7,7 +7,7 @@
 
 (def tns (sci/create-ns 'reitit.ring nil))
 
-#_(def reitit-ring-namespace
+(def reitit-ring-namespace
   { 'ring-handler (copy-var ring/ring-handler tns)
     'router (copy-var ring/router tns)
     'routes (copy-var ring/routes tns)
@@ -16,13 +16,13 @@
 
 (def ring-middleware-defaults-namespace
   { 'wrap-defaults (copy-var rmd/wrap-defaults tns)
-    ;;'api-defaults (copy-var rmd/api-defaults tns)
+    'api-defaults (copy-var rmd/api-defaults tns)
    })
 
 (def ring-util-response-namespace
-  {;;'response (copy-var response/response tns)
-   ;;'resource-data (copy-var response/resource-data tns)
-   ;;'header (copy-var response/header tns)
+  {'response (copy-var response/response tns)
+   'resource-data (copy-var response/resource-data tns)
+   'header (copy-var response/header tns)
    })
 
 ;; none 67850600
