@@ -335,7 +335,7 @@
    (println "ring.util.response resource-response options: " options)
    (let [path      (-> (str "/" path)  (.replace "//" "/"))
          root+path (-> (str (:root options) path) (.replaceAll "^/" ""))
-         io-resource-fn (or (get-in options [:static :io-resource-fn]) io/resource)
+         io-resource-fn  (or (get-in options [:static :io-resource-fn]) io/resource)
          load      #(if-let [loader (:loader options)]
                       (io-resource-fn % loader)
                       (io-resource-fn %))]
